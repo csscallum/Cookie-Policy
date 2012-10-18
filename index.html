@@ -1,0 +1,63 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Cookie Policy</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile viewport optimization -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script>
+	jQuery(document).ready(function(){
+		if (jQuery.cookie('cookiepermission') != '1') {
+				jQuery('#cookieNotification').show();
+			jQuery.cookie('cookiepermission', '1', { expires: 999 }); 
+		} else {
+			jQuery('#cookieNotification').hide();
+		}
+		jQuery('.continue').click(function(){
+			jQuery('#cookieNotification').slideUp();
+			return false;
+		});
+	});
+	</script>
+
+	<meta http-equiv="cleartype" content="on">
+</head>
+<body>
+<div id="cookieNotification">
+	<div class="cookieWrapper clearfix">
+		<h2>Cookies on SiteName</h2>
+		<p>We use cookies to ensure that we give you the best experience on our website. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on the this website. However, if you would like to, you can change your <a href="/cookie-policy">cookie settings at any time</a>.</p>
+		<ul>
+			<li><a href="#" class="continue">Continue</a></li>
+			<li><a href="/cookie-policy">Find Out More</a></li>
+		</ul>
+	</div>
+</div>
+
+<button type="submit">Clear Cookie</button>
+
+</body>
+<script>
+jQuery('button').click(function(){
+	$.removeCookie('cookiepermission');
+	location.reload();
+});
+</script>
+</html>

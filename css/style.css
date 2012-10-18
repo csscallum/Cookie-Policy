@@ -1,0 +1,78 @@
+/* =============================================================================
+Cookie Notification by Callum Strong
+Version: 0.1
+URL: https://github.com/csscallum/Boilerplate
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+============================================================================= */
+
+/* Global styles, this can be removed ================================ */
+
+html, body {
+	font-family: 'Droid sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Customise the styling below to suit your site ===================== */
+
+#cookieNotification {
+	background: #333;
+	color: #FFF;
+	padding: 20px 0 10px;
+}
+	.cookieWrapper {
+		margin: 0 auto;
+		width: 90%;
+	}
+	#cookieNotification h2 {
+		float: left;
+		line-height: 20px;
+		margin-top: 0;
+		width: 15%;
+	}
+	#cookieNotification p {
+		float: left;
+		font-size: 12px;
+		line-height: 20px;
+		margin-top: 0;
+		width: 70%;
+	}
+	#cookieNotification ul {
+		float: left;
+		margin: 0;
+		padding: 0 0 0 40px;
+		width: 15%;
+	}
+		#cookieNotification ul li {
+			font-weight: bold;
+			list-style: none;
+			line-height: 22px;
+		}
+	#cookieNotification a {
+		color: #DA1B23;
+		text-decoration: none;
+	}
+	#cookieNotification p a {
+		color: #FFF;
+		text-decoration: underline;
+	}
+	#cookieNotification li + li {
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+/* Chances are you'll already have a clearfix declared remove if not required */
+
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
